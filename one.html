@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>first example</title>
+</head>
+<body>
+	<div id="first_div">
+		<h1 id="clicked">click the button to unlock text</h1>
+		<button type="button" 
+		onclick="changeText()" 
+		ondblclick="undoChangeText()">
+		SHOW/HIDE
+		</button>
+	</div>
+
+	<label>Changing Images with Javascript</label>
+	<div id="phone_img">
+		
+		<img src="frontphone.png" id="camon"><br>&nbsp; &nbsp;
+		<button type="submit" onclick="frontPhone()">Front</button>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <button type="submit" onclick="backPhone()">Back</button>
+	</div>
+
+	<label>Changing the size of text with Javascript</label>
+	<div>
+		<p id="changing_text">Font Size</p>
+		<button type="button" onclick="bigFont()">Big</button>
+		<button type="button" onclick="biggerFont()">Bigger</button>
+		<button type="button" onclick="biggestFont()">Biggest</button>
+	</div>
+
+	<label>Hiding elements</label>
+	<div id="hide">
+		<h2 id="hidden_text">THis TeXt Is AnnOyinG</h2>
+		<button type="button" onclick="hideElement()">HIDE IT!!!</button>
+		<button type="button" onclick="showElement()">SEE</button>
+	</div>
+
+	<script type="text/javascript">
+		function changeText(){
+			document.getElementById('clicked').innerHTML = 'Hello JavaScript!';
+		}
+
+		function undoChangeText(){
+			document.getElementById('clicked').innerHTML = 'click to unlock text'
+		}
+
+		function frontPhone(){
+			document.getElementById('camon').src='frontphone.png';
+		}
+
+		function backPhone(){
+			document.getElementById('camon').src='backphone.png';
+		}
+
+		function bigFont(){
+			document.getElementById('changing_text').style.fontSize='20px';
+		}
+
+		function biggerFont(){
+			document.getElementById('changing_text').style.fontSize='40px';
+		}
+
+		function biggestFont(){
+			document.getElementById('changing_text').style.fontSize='60px';
+		}
+
+		function hideElement(){
+			document.getElementById('hidden_text').style.display='none';
+		}
+
+		function showElement(){
+			document.getElementById('hidden_text').style.display='block';
+		}
+	</script>
+</body>
+</html>

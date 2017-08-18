@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>data tyes</title>
+</head>
+<body>
+	<div>
+		<label>This is a number</label>
+		<h4 id="number"></h4>
+		<label>This is a String</label>
+		<h4 id="string"></h4>
+		<label>This is an Object</label>
+		<h4 id="object"></h4>
+		<label>Changing types</label>
+		<h4 id="change"></h4>
+
+		<label>When it comes to arrays, JS got you</label>
+		<h4 id="arr"></h4>
+
+		<label>typeof</label>
+		<h4 id="typ"></h4>
+
+		<input type="text" name="one">
+		<input type="text" name="two">
+		<h4 id="res"></h4>
+		<button type="submit" onclick="addFunction()">ADD</button>
+	</div>
+
+	<script type="text/javascript">
+		var num = 123457;
+		var str = 'How is Everyone in this Company'
+		var obj = {first_name:'Michael', surname:'Kalume', last_name:'Kitsao'}
+		document.getElementById('number').innerHTML=num;
+		document.getElementById('string').innerHTML=str;
+		document.getElementById('object').innerHTML=obj['first_name'] + ' ' + obj['surname'] + ' ' + obj['last_name'];
+		var y = 'michael';
+		var y = 123456678;
+		document.getElementById('change').innerHTML= y;
+
+		var myarray = ['Welcome', 'To', 'Savannah', 'Informatics', 'Limited']
+		var welcome = '';
+		for (var i = 0;i < 5; i++) {
+			welcome += myarray[i];
+			document.getElementById('arr').innerHTML= welcome;
+		}
+
+		document.getElementById('typ').innerHTML= typeof(myarray)
+		var a = document.getElementById('one').value;
+		var b = document.getElementById('two').value;
+		var c = parseInt(a);
+		window.alert(a, b);
+		var d = parseInt(b);
+		function addFunction(c,d){
+			var e = c + d;
+			document.getElementById('res').innerHTML = e;
+		}
+	</script>
+</body>
+</html>

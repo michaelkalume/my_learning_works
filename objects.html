@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h3 id="car_object"></h3>
+	<script type="text/javascript">
+		var car = {Model: 'Toyota IST', Type: 'Fiat', Color: 'Green', modelType: function(){return this.Model + ' ' + this.Type}}
+		document.getElementById('car_object').innerHTML=car.Model + car.Type + car.Color + car.modelType();
+	</script>
+</body>
+</html>
