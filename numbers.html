@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>numbers</title>
+</head>
+<body>
+<div>
+	<label>Numbers start</label>
+	<h2 id="def"></h2>
+
+	<label>adding numbers simple addition and concatination as strings</label>
+	<h2 id="add1"></h2>
+	<!-- <h2 id="add2"></h2> -->
+
+	<label>Javascript will try as much to convert strings to nmbers in integer operations</label>
+	<!-- unfortunately it doesnt work for addition because concatenation has a higher precedence -->
+	<h2 id="converter"></h2>
+
+	<label>Convert number to string using toString</label>
+	<h2 id="convert"></h2>
+
+	<label>Specifying number of decimal places</label>
+	<h2 id="specify"></h2>
+
+	<label>Specifying the number of digits</label>
+	<h2 id="specf"></h2>
+</div>
+
+<div>
+	<script type="text/javascript">
+		var a=0.2, b=0.3;
+		var c = a+b;
+		document.getElementById('def').innerHTML=c;
+
+		var d1=10, d2=20;
+		var resd = d1+d2;
+		document.getElementById('add1').innerHTML=resd;
+		
+		var e1='30', e2='5';
+		var rese = e1/e2;
+		document.getElementById('converter').innerHTML=rese;
+
+		var ee2 = 123456765;
+		var ee1 = ee2.toString();
+
+		document.getElementById('convert').innerHTML = ee1;
+
+		var dec = 12.00945;
+		var dec1 = dec.toFixed(3);
+		document.getElementById('specify').innerHTML=dec1;
+
+		var dec2 = dec.toPrecision(2);
+		document.getElementById('specf').innerHTML=dec2;
+
+		var x = true;
+		Number(x);
+
+		var det = new Date();
+		Number(det);
+		
+		// converting variables to integeer equivalent , use parseInt
+		// for float use parseFloat
+		// 
+
+	</script>
+</div>
+</body>
+</html>
