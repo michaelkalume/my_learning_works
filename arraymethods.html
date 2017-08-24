@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>array methods</title>
+	<style type="text/css">
+		h1 {
+			color:red;
+		}
+
+		h2{
+			color:blue;
+		}
+	</style>
+</head>
+<body>
+<div>
+	<h1>ARRAY METHODS</h1>
+	<h2>Converting an array to string</h2>
+	<h3 id="arraymethods"></h3>
+
+	<h2>Using the join method to convert array to sting</h2>
+	<h3 id="arraymethods1"></h3>
+
+	<h2>Popping from an array</h2>
+	<h3 id="arraymethods2"></h3>
+
+	<h2>Pushing an element into an array</h2>
+	<h3 id="arraymethods3"></h3>
+
+	<h2>Removing the first element from an array</h2>
+	<h3 id="arraymethods4"></h3>
+
+	<h2>Adding an element to the begining of an array</h2>
+	<h3 id="arraymethods5"></h3>
+
+	<h2>Deleting an element from the array</h2>
+	<h3 id="arraymethods6"></h3>
+
+	<h2>Adding elements using the splice method</h2>
+	<h3 id="splicer"></h3>
+
+	<h2>Removing elements from the array using the splice method</h2>
+	<h3 id="splicer1"></h3>
+
+	<h2>Merging arrays using concat method</h2>
+	<h3 id="concatination"></h3>
+
+	<h2>Concatenating three arrays using the concat method</h2>
+	<h3 id="concatination1"></h3>
+
+	<h2>Slicing an array</h2>
+	<h3 id="slicer"></h3>
+</div>
+
+<div>
+	<script type="text/javascript">
+		var myarray = ['Tecno', 'Infinix', 'Samsung', 'Itel', 'Iphone', 'Nokia'];
+
+		// converting arrays to string using toString();
+		document.getElementById('arraymethods').innerHTML = myarray.toString();
+
+		// converting an array to string using the join method which allows you to specify the separator
+		document.getElementById('arraymethods1').innerHTML = myarray.join('***');
+
+		// to remove the last element of an array use the pop() method
+		// the line below returns the elemnt that was remoived from the array
+		var popped = myarray.pop();
+		document.getElementById('arraymethods2').innerHTML = popped;
+
+		// to add an element to the end of the array
+		var y = myarray.push('Airtel_Kaduda');
+		document.getElementById('arraymethods3').innerHTML = myarray[myarray.length-1];
+
+		// removing the first element of an array, use the shift function
+		myarray.shift()
+		document.getElementById('arraymethods4').innerHTML = myarray[0];
+
+		// adding an element to the beggining of an array use the unshift method
+		myarray.unshift('Tecno')
+		document.getElementById('arraymethods5').innerHTML= myarray[0];
+
+		// deleting an element from the array
+		delete myarray[0];
+		document.getElementById('arraymethods6').innerHTML = myarray;
+
+		// adding elements into an array using the splice method
+		// eg array.splice(2,1, 'mango','avocado')...the first variable 2 defines the position where the elements shuld be spliced into or added, the second variable defines the number of elements to be removed, the other elements are the oned being added into the array
+		myarray.splice(3, 0, 'Oppo', 'Ofia', 'General_Mobiles');
+		document.getElementById('splicer').innerHTML = myarray;
+
+		// you can also use splice to remove elements from an array
+		myarray.splice(0, 2);
+		document.getElementById('splicer1').innerHTML = myarray;
+
+		// merging arrays using the concat method
+		var myarray1 = ['Mango', 'Orange', 'Apple', 'Berry'];
+		var newarray = myarray.concat(myarray1);
+		document.getElementById('concatination').innerHTML = newarray;
+
+		// merging three arrays
+		var myarray2 = ['Student', 'Pupil', 'Teacher', 'Lecturer', 'Mr', 'Mrs'];
+		var myarray4 = myarray.concat(myarray1, myarray2);
+		document.getElementById('concatination1').innerHTML = myarray4;
+
+		// slicing an array; basically cuts an array and returns the new array ie slice(2) means slice an array begginning from index2
+		var returnmyarray2 = myarray4.slice(7);
+		document.getElementById('slicer').innerHTML = returnmyarray2;
+		// slice method can take two arguments ie slice(2,5) means slic from position 2 to five exclusive
+	</script>
+</div>
+</body>
+</html>
