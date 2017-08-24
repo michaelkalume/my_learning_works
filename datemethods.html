@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>date methods</title>
+</head>
+<body>
+<div>
+	<h1>Date Methods</h1>
+	<h2>getDate()</h2>
+	<h3 id="getdate"></h3>
+
+	<h2>getDay()</h2>
+	<h3 id="getday"></h3>
+
+	<h2>getFullYear()</h2>
+	<h3 id="getfullyear"></h3>
+
+	<h2>getHours()</h2>
+	<h3 id="gethours"></h3>
+
+	<h2>getHours()</h2>
+	<h3 id="gettime"></h3>
+
+	<h2>getMonth()</h2>
+	<h3 id="getmonth"></h3>
+
+	<h2>setFullYear</h2>
+	<h3 id="setfullyear"></h3>
+
+
+	<h2>Date Parsing</h2>
+	<h3 id="pasring"></h3>
+	<h2>then convert the parsed date from milliseconds to a real date</h2>
+	<h3 id="realone"></h3>
+</div>
+
+<div>
+	<script type="text/javascript">
+		var a = new Date();
+		document.getElementById('getdate').innerHTML = a.getDate();
+
+		document.getElementById('getday').innerHTML = a.getDay();
+
+		document.getElementById('getfullyear').innerHTML = a.getFullYear();
+
+		document.getElementById('gethours').innerHTML = a.getHours();
+
+		document.getElementById('gettime').innerHTML = a.getTime();
+
+		document.getElementById('getmonth').innerHTML = a.getMonth();
+
+		var b = Date.parse('January 1, 2010');
+		document.getElementById('pasring').innerHTML = b;
+
+		var c = new Date(b);
+		document.getElementById('realone').innerHTML = c;
+
+		document.getElementById('setfullyear').innerHTML = a.setFullYear('2020')
+
+
+	</script>
+</div>
+</body>
+</html>

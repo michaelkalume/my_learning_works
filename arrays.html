@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+	<style type="text/css">
+		h1 {
+			color: red;
+		}
+		h2 {
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+<div>
+	
+</div>
+	<h1>ARRAYS</h1>
+	<h2>Accesing array values</h2>
+	<h3 id="access1"></h3>
+
+	<h2>Full Array</h2>
+	<h3 id="accesing2"></h3>
+
+	<h2>Length of an array</h2>
+	<h3 id="accessing3"></h3>
+
+	<h2>Sorted Array</h2>
+	<h3 id="accesing4"></h3>
+
+	<h2>Accessing an Array using a loop</h2>
+	<h3 id="accessing5"></h3>
+
+	<h2>Checking the Type of object</h2>
+	<h3 id="accessing6"></h3>
+
+<div>
+	<script type="text/javascript">
+		var myarray = ['Mark_X', 'IST', 'PRADO', 'Wish', 'Corrola'];
+		// this can also be done as shown below:
+			// var myarray = [
+			// 	'Mark_X', 
+			// 	'IST', 
+			// 	'PRADO', 
+			// 	'Wish', 
+			// 	'Corrola'
+			// 	];
+
+		// creating an array and assigning it values
+		var myarray1 = new Array('Toyota', 'Subaru', 'Mercedes_Benz', 'Porche', 'Ferrari');
+
+		// accessing an array values
+		document.getElementById('access1').innerHTML = myarray1[2];
+
+		// change the value of an array element
+		myarray1[2] = 'Fuso';
+		document.getElementById('access1').innerHTML = myarray1[2];
+
+		// accesing the whole array
+		document.getElementById('accesing2').innerHTML = myarray;
+
+		// arrays can contain elements if different types such as strings, numbers, methods and functions in the same array
+
+		// getting the length of an array or the number of element in the array
+		document.getElementById('accessing3').innerHTML = myarray1.length;
+
+		document.getElementById('accesing4').innerHTML = myarray1.sort();
+
+		// adding an element to an array
+		myarray.push('Vits');
+
+		//  you may also use the length property to add elements to the array
+		// myarray[myarray.length] = 'Vits';
+		// avoid using the index property of an array to add elements because it may lead to holes in the array that inturn becomes waste of memory
+
+		// Javascript does not support named indices, it only accoets numbered indices.
+
+		var count;
+		text = '<h3>'
+			for(count=0; count<myarray.length; count++){
+				text += myarray[count] + '<br />';
+			}
+			text += '</h3>'
+
+		document.getElementById('accessing5').innerHTML = text;
+
+		// checking whehter an object is an array, the typeof function returns object because arrays in JS are ojects, so we use the Array.isArray method which returns a boolean true or false
+		document.getElementById('accessing6').innerHTML = Array.isArray(myarray);
+
+		//  you can also use the instanceof method
+		// myarray instanceof Array
+	</script>
+</div>
+</body>
+</html>

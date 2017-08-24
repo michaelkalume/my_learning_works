@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date</title>
+</head>
+<body>
+<div>
+	<h1>Raw Date</h1>
+	<h3 id="tarehe"></h3>
+
+	<label>Javascript International Standard date</label>
+	<h2 id="internation"></h2>
+
+	<label>ISO DATES YYYY-MM</label>
+	<h2 id="iso"></h2>
+
+	<label>ISO DATES YYYY</label>
+	<h2 id="isoshort"></h2>
+
+	<h1>Initiating a date object</h1>
+	<h3 id="tarehe1"></h3>
+	<h3 id="tarehe2"></h3>
+	<h3 id="tarehe3"></h3>
+	<h3 id="tarehe4"></h3>
+
+
+	<label>JAVASCRIPT SHORT DATES</label>
+	<h2 id="shortdate"></h2>
+
+	<label>WARNINGS IN DATES OF JS</label>
+	<h2 id="warn"></h2>
+	<h2 id="warnlong"></h2>
+
+
+	<label>JAVASCRIPT LONG DATES</label>
+	<h2 id="longdates"></h2>
+
+	<label>js dates long date month/day imterchanged</label>
+	<h2 id="longdates1"></h2>
+
+	<label>js dates month written in full</label>
+	<h2 id="longdates2"></h2>
+
+
+</div>
+
+<div>
+	<script type="text/javascript">
+		document.getElementById('warn').innerHTML = new Date('2018/01/01');
+
+		document.getElementById('longdates1').innerHTML = new Date('Dec 25 2010');
+
+		document.getElementById('longdates2').innerHTML = new Date('December 25 1990');
+
+		document.getElementById('longdates').innerHTML = new Date('25 Jul 2013');
+
+		document.getElementById('warnlong').innerHTML = new Date('01-01-2011');
+
+		document.getElementById('shortdate').innerHTML = new Date('01/01/2017');
+
+		document.getElementById('tarehe1').innerHTML = new Date();
+
+		document.getElementById('iso').innerHTML = new Date('2018-01');
+
+		document.getElementById('isoshort').innerHTML = new Date('2018');
+		// document.getElementById('tarehe2').innerHTML = new Date(milliseconds);
+		// document.getElementById('tarehe3').innerHTML = new Date(dateString);
+		// document.getElementById('tarehe4').innerHTML = new Date(year, month, day, hours, minutes,seconds, milliseconds);
+		document.getElementById('internation').innerHTML = new Date('2017-04-23');
+		document.getElementById('tarehe').innerHTML = Date();
+
+		var tareh1 = new Date();
+		var tareh2 = new Date(milliseconds);
+		var tareh3 = new Date(dateString);
+		var tareh4 = new Date(year, month, day, hours, monutes, seconds, milliseconds);
+
+		document.getElementById('tarehe1').innerHTML = tareh1;
+
+		// document.getElementById('tarehe1').innerHTML = tareh1;
+
+		// document.getElementById('tarehe2').innerHTML = tareh2;
+
+		// document.getElementById('tarehe3').innerHTML = tareh3;
+
+		// document.getElementById('tarehe4').innerHTML = tareh4;
+	</script>
+</div>
+</body>
+</html>
