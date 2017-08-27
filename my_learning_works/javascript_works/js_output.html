@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>output</title>
+</head>
+<body>
+	<input type="text" name="thisone" id="number1"> &nbsp; &nbsp;
+	<input type="text" name="thistwo" id="number2">
+	<h3 id="answer"></h3>
+
+	<button type="submit" onclick="additionFunction()">ADD</button>
+
+	<script type="text/javascript">
+		function additionFunction(){
+			var one = document.getElementById('number1').value;
+			var onevalue = parseInt(one)
+			var two = document.getElementById('number2').value;
+			var twovalue = parseInt(two)
+			var three = onevalue + twovalue;
+			document.getElementById('answer').innerHTML=three;
+
+			// document.write(three)
+		}
+	</script>
+</body>
+</html>

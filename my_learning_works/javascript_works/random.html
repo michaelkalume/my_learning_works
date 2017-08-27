@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random</title>
+</head>
+<body>
+<div>
+	<h1>Random Math function</h1>
+	<h3 id="rand"></h3>
+
+
+	<h1>Generating higher integers</h1>
+	<h3 id="higher"></h3>
+</div>
+
+<div>
+	<script type="text/javascript">
+		document.getElementById('rand').innerHTML = Math.random();
+
+		document.getElementById('higher').innerHTML = Math.floor(Math.random()*11)//between 0 and 10
+		// you can get a 1-10 by adding one to the random generated between 0-9,
+		//  you can also generate a wider range by changing the multiplier
+
+		// a proper random function would be like the one below
+		function generateRandom(min, max){
+			return Math.floor(Math.random()* (max - min)) + min;
+		}
+
+		//  the function above generates a random integer between min(included) and max(excluded)
+		// to include max do the function below
+		function generateInclusiveOfAll(min, max){
+			return Math.floor(Math.random()* (max-min+1))+min;
+		}
+	</script>
+</div>
+
+
+</body>
+</html>

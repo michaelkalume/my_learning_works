@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<title>Angular Hello World</title>
+	</head>
+	<body>
+		<!-- <div ng-controller="MyController">
+		      <h1>Hello {{ clock }}!</h1>
+		    </div>
+		    <script type="text/javascript">
+		      function MyController($scope) {
+		        $scope.clock = new Date();
+		        var updateClock = function() {
+		          $scope.clock = new Date();
+		        };
+		        setInterval(function() {
+		          $scope.$apply(updateClock);
+		        }, 1000);
+		        updateClock();
+		      };
+		    </script> -->
+		<!-- <div ng-controller="MyController">
+	      <h1>Hello {{ clock }}!</h1>
+	    </div>
+	    <script type="text/javascript">
+	      function MyController($scope) {
+	        $scope.clock = new Date();
+	        var updateClock = function() {
+	          $scope.clock = new Date();
+	        };
+	        setInterval(function() {
+	          $scope.$apply(updateClock);
+	        }, 1000);
+	        updateClock();
+	      };
+	    </script> -->
+		<div>
+			<input type="text" name="lucky_word" ng-model = "person.name">
+			<input type="text" name="email" ng-model="person.email">
+			<h1>Hello {{ person.name }}</h1>
+			<h1>Your email address is {{ person.email }}</h1>
+		</div>
+	</body>
+</html>

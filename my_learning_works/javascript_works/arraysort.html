@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ArraySort</title>
+	<style type="text/css">
+		h1{
+			color: red;
+		}
+		h2{
+			color:blue;
+		}
+	</style>
+</head>
+<body>
+<div>
+	<h1>SORTING ARRAYS</h1>
+	<h2>Sorting alphabetically</h2>
+	<h3 id="sortingarrays"></h3>
+
+	<h2>Reversing an Array</h2>
+	<h3 id="reversed"></h3>
+
+	<h2>Sort Integers</h2>
+	<h3 id="sortingintegers"></h3>
+
+	<h2>The largest value in an array</h2>
+	<h3 id="findmax"></h3>
+</div>
+
+<div>
+	<script type="text/javascript">
+		var myarray = ['Red', 'Orange','Yellow', 'Green', 'Blue', 'Violet', 'Indigo'];
+
+		// sorting arrays using the sort function
+		document.getElementById('sortingarrays').innerHTML = myarray.sort();
+
+		// reversing an array using the reverse function
+		document.getElementById('reversed').innerHTML = myarray.reverse();
+
+		// sort function works well with string but numbers give incorrect resuls because as a string 100 would come before 20 in an ascending order which is indeed wrong. so we modify the sort function to cater for this.
+		var myarray1 = [33, 12, 345, 3, 234, 4213, 9, 22];
+		myarray1.sort(function(a, b){return a - b})
+		// this function above can also be used to determine the lowest and higherst value in the array of integers as it will finally be at position 0 and the highest value will be at position length-1
+
+		document.getElementById('sortingintegers').innerHTML = myarray1;
+
+		// you can also se the Math.max.apply(Array) to find the maximum number
+		var myarray2 = [33, 12, 345, 3, 234, 4213, 9, 22];
+		document.getElementById('findmax').innerHTML = Math.max.apply(null, myarray2);
+		// using min will give the smallest value in an array of integers
+	</script>
+</div>
+</body>
+</html>

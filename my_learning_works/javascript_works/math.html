@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>math</title>
+</head>
+<body>
+<div>
+	<label>Math PI</label>
+	<h2 id="pi"></h2>
+
+	<label>Rounding off to the nearest integer</label>
+	<h2 id="round"></h2>
+
+	<label>Power math function</label>
+	<h2 id="square"></h2>
+
+	<label>Square root using Math</label>
+	<h2 id="sqrt"></h2>
+
+	<label>Absolute positive value</label>
+	<h2 id="abso"></h2>
+
+	<label>Ceil of a float</label>
+	<h2 id="ceiling"></h2>
+
+	<label>Floor of a float</label>
+	<h2 id="flooring"></h2>
+</div>
+
+<div>
+	<script type="text/javascript">
+
+	// use sin() to find the sine of a certain angle value
+	// use cos() to find the cosine of a certain angle value
+	// use min() to find the minimal value in a list of arguments eg. Math.min(1,2,3,4,5)
+	// use max() to find the maximum value in a list of arguments eg. Math.max(1,2,3,4,5)
+	// Math.random() returns a random number between 0 inclusive and 1 exclusive
+	
+		document.getElementById('pi').innerHTML = Math.PI;
+
+		var mine = 234.55555;
+		var mine1 = Math.round(mine);
+		document.getElementById('round').innerHTML = mine1;
+
+		document.getElementById('square').innerHTML= Math.pow(9, 9);
+
+		document.getElementById('sqrt').innerHTML = Math.sqrt(144);
+
+		document.getElementById('abso').innerHTML = Math.abs(-43.22222);
+
+		document.getElementById('ceiling').innerHTML = Math.ceil(43.22222);
+
+		document.getElementById('flooring').innerHTML = Math.floor(43.22222);
+	</script>
+</div>
+</body>
+</html>

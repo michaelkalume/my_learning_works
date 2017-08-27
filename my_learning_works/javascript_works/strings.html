@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>strings</title>
+</head>
+<body>
+<div>
+	<label>below is a javascript stkring</label>
+	<h3 id="str"></h3>
+
+	<label>The length of the string is:</label>
+	<h3 id="length"></h3>
+
+	<label>This string demonstrates use of special characters</label>
+	<h3 id="specialchars"></h3>
+
+	<label>This here demonstrates use of escape sequence characters</label>
+	<h3 id="escaper"></h3>
+
+	<label>Strings as objects</label>
+	<h3 id="srtas"></h3>
+
+	<label id="mytext" value="Valuable"></label>
+	<h3 id="found"></h3>
+	<h3 id="found1"></h3>
+
+
+	<label>Searching using 'search' Method</label>
+	<h3 id="searcher"></h3>
+
+	<label>Slicing a string</label>
+	<h3 id="slicer"></h3>
+
+	<label>substr method</label>
+	<h3 id="sub1"></h3>
+
+	<label>Replacing a string using replace method</label>
+	<h3 id="rep">original sentence looks like this, original</h3>
+	<h3 id="rep1"></h3>
+	<label>replacing all occurences</label>
+	<h3 id="replall"></h3>
+
+	<label>converting to uppercase and lowercase</label>
+	<h3 id="upper"></h3>
+	<h3 id="lower"></h3>
+
+	<label>string concatenation</label>
+	<h3 id="con"></h3>
+
+	<label>getting a character at a certain index</label>
+	<h3 id="cat"></h3>
+</div>
+
+<div>
+	<script type="text/javascript">
+
+		var srt = 'original seNteNce Looks Like this, original', srt1 = 'Whats your next one???';
+
+		var newone = srt.replace('original', 'new');
+		document.getElementById('rep1').innerHTML=newone;
+
+		var nextnew = srt.replace(/original/g, 'new')
+		document.getElementById('replall').innerHTML=nextnew;
+
+		var low = srt.toLowerCase();
+		var up = srt.toUpperCase();
+		document.getElementById('upper').innerHTML=up;
+		document.getElementById('lower').innerHTML=low;
+
+		var newstr = srt.concat(' ', srt1);
+		document.getElementById('con').innerHTML=newstr;
+
+		var mychar = srt.charAt(5);
+		document.getElementById('cat').innerHTML=mychar;
+
+		// converting a string to an array
+		var newarr = srt.split(',')
+		// splitting into an array using the ',' character. space and pipe can also be used
+
+
+		var mystring = "Don't you worry,'Everything is gonna be alright'";
+		document.getElementById('str').innerHTML = mystring;
+		var leng = mystring.length;
+		document.getElementById('length').innerHTML=leng;
+		var stringspecial = "It\'s been a long day!!!";
+		document.getElementById('specialchars').innerHTML=stringspecial;
+		var escaping  = "When we escape using \t horizontal tab, we can also do the same with \v vertical tabs and  \ line break";
+		document.getElementById('escaper').innerHTML=escaping;
+
+		var stringer = new String("Michael Kalume Kitsao");
+		document.getElementById('srtas').innerHTML=stringer
+
+		var searched = "Searching using 'search' Method";
+		var searche = searched.search('search');
+		document.getElementById('searcher').innerHTML=searche;
+
+		var sliced = searched.slice(3, 7);
+		document.getElementById('slicer').innerHTML=sliced;
+		// you can also use substring() Method
+
+		var sub = searched.substr(3, 7);
+		document.getElementById('sub1').innerHTML=sub;
+
+		var taken = document.getElementById('mytext').innerHTML="This is my Text,Me only!!!";
+		var position = taken.indexOf("my");
+		document.getElementById('found').innerHTML = position;
+		//can also serch from a certain index such as var position = taken.indexOf("my",20);
+		var last = taken.LastIndexOf("my");
+		document.getElementById('found1').innerHTML = last;
+	</script>
+</div>
+</body>
+</html>

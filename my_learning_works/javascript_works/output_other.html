@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>output other</title>
+</head>
+<body>
+
+	<label>this is a number</label>
+	<h4 id="number"></h4>
+
+	<label>this is a string</label>
+	<h4 id="string"></h4>
+
+	<label>this is a variable</label>
+	<h4 id="variable"></h4>
+
+	<label>this is a result of an arithmetic operation</label>
+	<h4 id="result"></h4>
+
+	<label>concatenation</label>
+	<h4 id="concatenation"></h4>
+
+	<label></label>
+	<script type="text/javascript">
+		console.log(5 + 7)
+		document.getElementById('string').innerHTML='kalumewakitsao';
+		document.getElementById('number').innerHTML=2017;
+		//this is a javascript comment
+
+		/*
+		this is a block of JS comments
+		which have covered multiple lines
+		*/
+		var variable = 456;
+		document.getElementById('variable').innerHTML=variable;
+
+		var result = (5 + 7)*24;
+		document.getElementById('result').innerHTML=result;
+
+		var name = 'Kalume' + ' ' + 'Wa' + ' ' + 'Kitsao';
+		document.getElementById('concatenation').innerHTML=name;
+	</script>
+</body>
+</html>
